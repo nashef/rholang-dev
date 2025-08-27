@@ -12,17 +12,25 @@ Start your journey with Rholang, from basic concepts to advanced techniques.
 
 ## Learning Path
 
-### 📚 Getting Started
-New to Rholang? Start here with installation and your first program.
-[Start Learning →](getting-started/)
+<div class="learning-cards">
+  <div class="learning-card">
+    <h3>📚 Getting Started</h3>
+    <p>New to Rholang? Start here with installation and your first program.</p>
+    <a href="getting-started/" class="card-link">Start Learning →</a>
+  </div>
 
-### 📖 Tutorials 
-Step-by-step guides to build real applications with Rholang.
-[View Tutorials →](tutorials/)
+  <div class="learning-card">
+    <h3>📖 Tutorials</h3>
+    <p>Step-by-step guides to build real applications with Rholang.</p>
+    <a href="tutorials/" class="card-link">View Tutorials →</a>
+  </div>
 
-### 💻 Examples
-Explore code examples demonstrating various Rholang features.
-[Browse Examples →](examples/)
+  <div class="learning-card">
+    <h3>💻 Examples</h3>
+    <p>Explore code examples demonstrating various Rholang features.</p>
+    <a href="examples/" class="card-link">Browse Examples →</a>
+  </div>
+</div>
 
 ## Quick Links
 

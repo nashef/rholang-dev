@@ -492,14 +492,18 @@ body:not(.docs-page) .main {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: white;
+  color: white !important;
 }
 
 .hero-tagline {
   font-size: 1.5rem;
   opacity: 0.95;
   margin-bottom: 2.5rem;
-  color: white;
+  color: white !important;
+}
+
+.hero h1, .hero h2, .hero h3, .hero p {
+  color: white !important;
 }
 
 .hero-actions {
@@ -792,6 +796,81 @@ body:not(.docs-page) .main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+/* Learning Cards Grid */
+.learning-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.learning-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.learning-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.learning-card h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.learning-card p {
+  color: #666;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.learning-card .card-link {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.learning-card .card-link:hover {
+  color: #764ba2;
+  text-decoration: none;
+}
+
+/* Style learning resource lists */
+.page-content h3#online-tools + ul,
+.page-content h3#community-support + ul {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  list-style: none;
+}
+
+.page-content h3#online-tools + ul li,
+.page-content h3#community-support + ul li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.page-content h3#online-tools + ul li::before,
+.page-content h3#community-support + ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
 }
 
 /* Responsive adjustments for homepage */

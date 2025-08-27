@@ -106,25 +106,35 @@ layout: table_wrappers
 
   <!-- Main Content -->
   <main class="main-content">
-    {% if page.parent %}
+    {% if page.url != '/' %}
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <ol>
           <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          {% if page.grand_parent %}
-            <li><a href="{{ '/' | append: page.grand_parent | downcase | replace: ' ', '-' | relative_url }}">{{ page.grand_parent }}</a></li>
-          {% endif %}
-          {% if page.parent %}
+          {% if page.url == '/learn/' %}
+            <li class="active">Learn</li>
+          {% elsif page.url == '/reference/' %}
+            <li class="active">Reference</li>
+          {% elsif page.url == '/community/' %}
+            <li class="active">Community</li>
+          {% elsif page.url == '/blog/' %}
+            <li class="active">Blog</li>
+          {% elsif page.parent %}
+            {% if page.grand_parent %}
+              <li><a href="{{ '/' | append: page.grand_parent | downcase | replace: ' ', '-' | relative_url }}">{{ page.grand_parent }}</a></li>
+            {% endif %}
             <li><a href="{{ '/' | append: page.parent | downcase | replace: ' ', '-' | relative_url }}">{{ page.parent }}</a></li>
+            <li class="active">{{ page.title }}</li>
+          {% else %}
+            <li class="active">{{ page.title }}</li>
           {% endif %}
-          <li class="active">{{ page.title }}</li>
         </ol>
       </nav>
     {% endif %}
 
     <article class="page-content">
-      {% if page.title and page.layout != 'home' %}
-        <h1>{{ page.title }}</h1>
-      {% endif %}
+      {% comment %}
+        Don't show automatic title - let the content provide its own heading
+      {% endcomment %}
       
       {{ content }}
     </article>
