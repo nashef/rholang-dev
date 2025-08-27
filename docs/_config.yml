@@ -58,8 +58,13 @@ back_to_top_text: "Back to top"
 enable_copy_code_button: true
 
 # Navigation structure
-nav_enabled: true
+nav_enabled: false # Disabled as we're using custom top navigation
 nav_sort: case_sensitive # Capital letters sorted before lowercase
+
+# Custom assets
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # External navigation links
 nav_external_links:
