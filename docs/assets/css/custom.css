@@ -90,6 +90,17 @@ a:hover {
   list-style: none;
 }
 
+/* Ensure nav-item can contain the pseudo-element */
+.nav-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 .nav-link {
   color: #ecf0f1;
   text-decoration: none;
@@ -118,12 +129,27 @@ a:hover {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   min-width: 200px;
   border-radius: 4px;
-  margin-top: 0.5rem;
-  padding: 0;
+  margin-top: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   list-style: none;
+  z-index: 1000;
 }
 
-.nav-item:hover .dropdown-menu {
+/* Add a invisible bridge to prevent hover loss */
+.nav-item:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+/* Create an invisible expanded hover area */
+.nav-item:hover::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 1rem;
   display: block;
 }
 

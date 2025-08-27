@@ -12,19 +12,40 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Dropdown functionality
-  const dropdownItems = document.querySelectorAll('.nav-item.has-dropdown');
+  const dropdownItems = document.querySelectorAll('.nav-item');
   
   dropdownItems.forEach(function(item) {
+    const dropdown = item.querySelector('.dropdown-menu');
     const link = item.querySelector('.nav-link');
+    let timeoutId;
     
-    // Desktop hover behavior
-    if (window.innerWidth > 768) {
+    if (dropdown) {
+      // Desktop hover behavior
       item.addEventListener('mouseenter', function() {
-        this.classList.add('show');
+        if (window.innerWidth > 768) {
+          clearTimeout(timeoutId);
+          dropdown.style.display = 'block';
+        }
       });
       
-      item.addEventListener('mouseleave', function() {
-        this.classList.remove('show');
+      item.addEventListener('mouseleave', function(e) {
+        if (window.innerWidth > 768) {
+          // Add a small delay before hiding to allow cursor movement
+          timeoutId = setTimeout(function() {
+            dropdown.style.display = 'none';
+          }, 100);
+        }
+      });
+      
+      // Keep dropdown visible when hovering over it
+      dropdown.addEventListener('mouseenter', function() {
+        clearTimeout(timeoutId);
+      });
+      
+      dropdown.addEventListener('mouseleave', function() {
+        if (window.innerWidth > 768) {
+          dropdown.style.display = 'none';
+        }
       });
     }
     
