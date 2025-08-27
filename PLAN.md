@@ -23,22 +23,29 @@ rholang-dev/
 
 ```
 
-## Technology Stack
+## Technology Stack: Jekyll (GitHub Pages Native)
 
-### Option 1: Jekyll (GitHub Pages Default)
-- **Pros**: Native GitHub Pages support, no build step required
-- **Cons**: Ruby-based, limited modern features
-- **Theme**: Just the Docs or Minimal Mistakes
+### Selected Solution: Jekyll
+- **Pros**: Native GitHub Pages support, no build step required, automatic deployment
+- **Cons**: Ruby-based, limited modern features compared to newer generators
+- **Theme**: Just the Docs (recommended for documentation sites)
 
-### Option 2: Docusaurus (Recommended)
-- **Pros**: Modern React-based, excellent search, versioning support
-- **Cons**: Requires build step via GitHub Actions
-- **Theme**: Classic theme with customization
+#### Theme Options
+1. **Just the Docs** (Recommended)
+   - Purpose-built for documentation
+   - Built-in search
+   - Clean navigation structure
+   - Mobile responsive
+   
+2. **Minimal Mistakes**
+   - More customizable
+   - Better for blog-style content
+   - Requires more configuration
 
-### Option 3: MkDocs with Material Theme
-- **Pros**: Python-based, beautiful Material Design, great search
-- **Cons**: Requires build step
-- **Theme**: Material for MkDocs
+3. **Minima** (Default)
+   - Simple and clean
+   - Good starting point
+   - Limited documentation features
 
 ## Content Structure
 
@@ -81,11 +88,11 @@ rholang-dev/
 ## Implementation Steps
 
 ### Phase 1: Setup (Week 1)
-1. Choose and configure static site generator
-2. Set up GitHub Pages deployment
+1. Configure Jekyll with Just the Docs theme
+2. Set up GitHub Pages deployment from /docs folder
 3. Configure custom domain (if applicable)
-4. Create basic site structure
-5. Set up CI/CD pipeline
+4. Create basic site structure with _config.yml
+5. No CI/CD pipeline needed (automatic Jekyll deployment)
 
 ### Phase 2: Core Documentation (Week 2-3)
 1. Write homepage content
@@ -100,12 +107,12 @@ rholang-dev/
 4. Add code examples
 
 ### Phase 4: Polish and Launch (Week 6)
-1. Add search functionality
-2. Implement syntax highlighting for Rholang
-3. Create custom Rholang code theme
+1. Configure Just the Docs built-in search
+2. Implement syntax highlighting for Rholang using Rouge
+3. Create custom Rholang lexer for Rouge (if needed)
 4. Test all links and navigation
-5. Optimize for SEO
-6. Add analytics (optional)
+5. Optimize for SEO with Jekyll SEO plugin
+6. Add Google Analytics (optional)
 
 ## Features to Include
 
@@ -126,18 +133,14 @@ rholang-dev/
 
 ## GitHub Pages Configuration
 
-### Deployment Options
-1. **From main branch /docs folder** (Recommended)
-   - Keep documentation with code
-   - Simpler repository structure
-
-2. **From gh-pages branch**
-   - Separate documentation from code
-   - Clean main branch
-
-3. **GitHub Actions deployment**
-   - Required for non-Jekyll generators
-   - More flexibility
+### Deployment Configuration
+**Using main branch /docs folder**
+- Documentation lives alongside code
+- Automatic Jekyll build and deployment
+- No GitHub Actions required
+- Configure in repository Settings → Pages
+- Select Source: Deploy from branch
+- Select Branch: main, Folder: /docs
 
 ## Maintenance Plan
 
@@ -161,7 +164,9 @@ rholang-dev/
 - Community contributions
 
 ## Next Steps
-1. Review and approve this plan
-2. Select technology stack
-3. Create initial repository structure
-4. Begin Phase 1 implementation
+1. ~~Review and approve this plan~~ ✓
+2. ~~Select technology stack~~ ✓ (Jekyll with Just the Docs)
+3. Create initial /docs directory structure
+4. Install and configure Just the Docs theme
+5. Create _config.yml with basic Jekyll configuration
+6. Begin Phase 1 implementation
