@@ -69,33 +69,59 @@ nav_external_links:
 
 # Collections for organizing content
 collections:
-  getting-started:
-    permalink: "/:collection/:path/"
+  posts:
     output: true
-  language-guide:
-    permalink: "/:collection/:path/"
+    permalink: /blog/:year/:month/:day/:title/
+  learn:
     output: true
-  tutorials:
-    permalink: "/:collection/:path/"
+    permalink: /learn/:path/
+  reference:
     output: true
-  api-reference:
-    permalink: "/:collection/:path/"
+    permalink: /reference/:path/
+  community:
     output: true
+    permalink: /community/:path/
 
+# Navigation structure
 just_the_docs:
   collections:
-    getting-started:
-      name: Getting Started
+    learn:
+      name: Learn
       nav_order: 1
-    language-guide:
-      name: Language Guide
+    reference:
+      name: Reference
       nav_order: 2
-    tutorials:
-      name: Tutorials
+    community:
+      name: Community
       nav_order: 3
-    api-reference:
-      name: API Reference
-      nav_order: 4
+
+# Blog configuration
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Rholang Team"
+  - scope:
+      path: "learn"
+    values:
+      layout: "default"
+      parent: "Learn"
+  - scope:
+      path: "reference"
+    values:
+      layout: "default"
+      parent: "Reference"
+  - scope:
+      path: "community"
+    values:
+      layout: "default"
+      parent: "Community"
 
 # Plugins
 plugins:

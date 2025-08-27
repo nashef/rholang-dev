@@ -1,10 +1,10 @@
 ---
 layout: default
 title: API Reference
-parent: Home
-nav_order: 5
+parent: Reference
+nav_order: 2
 has_children: true
-permalink: /api-reference/
+permalink: /reference/api/
 ---
 
 # API Reference

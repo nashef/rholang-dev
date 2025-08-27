@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Home
-nav_order: 1
+title: Rholang - Concurrent Language for Blockchain
+nav_exclude: true
 description: "Rholang is a reflective higher-order concurrent programming language designed for blockchain and distributed computing."
 permalink: /
 ---
@@ -54,7 +54,7 @@ This simple example demonstrates:
 
 ## Getting Started
 
-Ready to dive in? Start with our [Getting Started Guide]({% link getting-started/installation.md %}) to:
+Ready to dive in? Start with our [Getting Started Guide]({{ '/learn/getting-started/' | relative_url }}) to:
 
 1. Install Rholang development tools
 2. Set up your development environment

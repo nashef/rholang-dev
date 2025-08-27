@@ -2,6 +2,7 @@
 layout: default
 title: Installation
 parent: Getting Started
+grand_parent: Learn
 nav_order: 1
 ---
 

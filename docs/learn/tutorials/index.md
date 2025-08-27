@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Tutorials
-parent: Home
-nav_order: 4
+parent: Learn
+nav_order: 2
 has_children: true
-permalink: /tutorials/
+permalink: /learn/tutorials/
 ---
 
 # Rholang Tutorials

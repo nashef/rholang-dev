@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Examples
-parent: Home
-nav_order: 6
+parent: Learn
+nav_order: 3
 has_children: true
-permalink: /examples/
+permalink: /learn/examples/
 ---
 
 # Code Examples

@@ -1,82 +1,132 @@
-# GitHub Pages Documentation Site Plan for Rholang
+# GitHub Pages Community & Documentation Site Plan for Rholang
 
 ## Overview
-Create a comprehensive documentation website for the Rholang programming language using GitHub Pages.
+Create a comprehensive community hub and documentation website for the Rholang programming language using GitHub Pages, serving both newcomers and the existing community.
 
 ## Project Structure
 ```
 rholang-dev/
-├── docs/                    # Main documentation directory
-│   ├── index.md            # Homepage
-│   ├── getting-started/    # Introduction and setup guides
-│   ├── language-guide/     # Core language documentation
-│   ├── tutorials/          # Step-by-step tutorials
-│   ├── api-reference/      # API and standard library docs
-│   └── examples/           # Code examples
-├── _config.yml             # Jekyll configuration
-├── assets/                 # Static assets
-│   ├── css/               # Stylesheets
-│   ├── js/                # JavaScript files
-│   └── images/            # Images and diagrams
+├── docs/                    # Main site directory
+│   ├── index.md            # Landing page (community hub)
+│   ├── _layouts/           # Custom Jekyll layouts
+│   │   ├── home.html      # Custom homepage layout
+│   │   └── blog.html      # Blog post layout
+│   ├── learn/              # Learning resources
+│   │   ├── getting-started/
+│   │   ├── tutorials/      
+│   │   └── examples/       
+│   ├── reference/          # Technical documentation
+│   │   ├── language/       
+│   │   ├── api/            
+│   │   └── tools/          
+│   ├── community/          # Community resources
+│   │   ├── contribute.md   
+│   │   ├── events.md       
+│   │   ├── showcase.md     
+│   │   └── governance.md   
+│   ├── blog/               # News and updates
+│   │   └── _posts/         
+│   ├── resources/          # External resources
+│   │   ├── tools.md        
+│   │   └── libraries.md    
+│   ├── playground.md       # Link to online REPL
+│   ├── _config.yml         # Jekyll configuration
+│   └── assets/             # Static assets
+│       ├── css/            
+│       ├── js/             
+│       └── images/         
 └── .github/
     └── workflows/          # CI/CD for site deployment
 
 ```
 
-## Technology Stack: Jekyll with Just the Docs Theme
+## Technology Stack: Jekyll with Hybrid Theme Approach
 
-### Selected Solution: Jekyll + Just the Docs
+### Selected Solution: Jekyll + Hybrid Theme
 - **Static Site Generator**: Jekyll (GitHub Pages native)
-- **Theme**: Just the Docs
+- **Theme Strategy**: 
+  - Custom homepage layout for landing page
+  - Just the Docs theme for documentation sections
+  - Jekyll blog functionality for news/updates
 - **Deployment**: Automatic via GitHub Pages
 
-### Why Just the Docs?
-- Purpose-built for technical documentation
-- Built-in search functionality
-- Clean, professional navigation structure
-- Mobile responsive design
-- Supports code syntax highlighting
-- Easy configuration via _config.yml
-- Active community and maintenance
-- Extensive customization options for branding
+### Why Hybrid Approach?
+- Custom homepage provides marketing/community focus
+- Just the Docs excels at technical documentation
+- Native Jekyll blog support for news and updates
+- Maintains consistency while serving different purposes
+- Flexible navigation between community and docs
+- Mobile responsive across all sections
 
 ## Content Structure
 
-### 1. Homepage (index.md)
-- Brief introduction to Rholang
-- Key features and benefits
-- Quick links to important sections
-- Latest news/updates
+### 1. Landing Page (index.md)
+- **Hero Section**: Tagline, value proposition, CTAs
+- **Why Rholang?**: Key differentiators (concurrent, blockchain-ready, formally verified)
+- **Use Cases**: DApps, smart contracts, distributed systems
+- **Community Highlights**: Member count, recent activity
+- **Getting Started**: Quick path to first program
+- **Latest Updates**: Recent blog posts, releases
+- **Sponsors/Users**: Companies and projects using Rholang
 
-### 2. Getting Started
-- Installation instructions
-- Hello World example
-- Development environment setup
-- Quick start guide
+### 2. Learn Section
+#### Getting Started
+- Installation (multiple platforms)
+- Hello World walkthrough
+- Development environment setup (VS Code, IntelliJ, Rholang Cloud)
+- Basic concepts introduction
 
-### 3. Language Guide
-- Syntax and semantics
-- Data types and structures
+#### Tutorials
+- Progressive learning path
+- Interactive examples
+- Building real applications
+- Video tutorials integration
+
+#### Examples
+- Categorized code samples
+- Real-world implementations
+- Community contributions
+
+### 3. Reference Section
+#### Language Guide
+- Comprehensive syntax reference
+- Concurrency model deep dive
 - Pattern matching
-- Concurrency model
 - Channels and processes
-- Name spaces
+- Name spaces and unforgeable names
+- Formal semantics
 
-### 4. Tutorials
-- Building your first Rholang application
-- Working with concurrent processes
-- Best practices
-- Common patterns
+#### API Documentation
+- Standard library
+- System contracts
+- RNode APIs
+- Web APIs
 
-### 5. API Reference
-- Standard library documentation
-- Built-in functions
-- System APIs
+#### Tools & IDEs
+- Development tools overview
+- IDE configurations
+- Debugging techniques
+- Testing frameworks
 
-### 6. Examples
-- Sample programs
-- Real-world use cases
-- Code snippets
+### 4. Community Section
+- **Contribute**: How to contribute to Rholang/RChain
+- **Events**: Conferences, meetups, online events
+- **Showcase**: Projects built with Rholang
+- **Governance**: Cooperative structure, voting, participation
+- **Support**: Discord, forums, Stack Overflow
+
+### 5. Blog
+- Development updates
+- Technical deep dives
+- Community spotlights
+- Release announcements
+- Tutorial posts
+
+### 6. Resources
+- External tools and libraries
+- Educational materials
+- Research papers
+- Partner projects
 
 ## Implementation Steps
 
@@ -111,18 +161,24 @@ rholang-dev/
 
 ### Essential
 - Responsive design
-- Search functionality
-- Syntax highlighting
-- Navigation menu
+- Search functionality (global site search)
+- Syntax highlighting for Rholang
+- Multi-level navigation menu
 - Mobile support
+- Blog/news functionality
+- Community links (Discord, GitHub, Twitter)
+- Custom homepage design
 
 ### Nice to Have
 - Dark/light theme toggle
-- Version selector
-- Interactive code playground
+- Version selector for documentation
+- Interactive code playground integration
 - API documentation generator
-- Community contributions guide
-- RSS feed for updates
+- Live Rholang REPL embed
+- RSS feed for blog updates
+- Newsletter signup
+- Community contributor wall
+- Project showcase gallery
 
 ## GitHub Pages Configuration
 

@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Getting Started
-parent: Home
-nav_order: 2
+parent: Learn
+nav_order: 1
 has_children: true
-permalink: /getting-started/
+permalink: /learn/getting-started/
 ---
 
 # Getting Started with Rholang

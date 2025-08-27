@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Language Guide
-parent: Home
-nav_order: 3
+parent: Reference
+nav_order: 1
 has_children: true
-permalink: /language-guide/
+permalink: /reference/language/
 ---
 
 # Rholang Language Guide
