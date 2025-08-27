@@ -23,29 +23,22 @@ rholang-dev/
 
 ```
 
-## Technology Stack: Jekyll (GitHub Pages Native)
+## Technology Stack: Jekyll with Just the Docs Theme
 
-### Selected Solution: Jekyll
-- **Pros**: Native GitHub Pages support, no build step required, automatic deployment
-- **Cons**: Ruby-based, limited modern features compared to newer generators
-- **Theme**: Just the Docs (recommended for documentation sites)
+### Selected Solution: Jekyll + Just the Docs
+- **Static Site Generator**: Jekyll (GitHub Pages native)
+- **Theme**: Just the Docs
+- **Deployment**: Automatic via GitHub Pages
 
-#### Theme Options
-1. **Just the Docs** (Recommended)
-   - Purpose-built for documentation
-   - Built-in search
-   - Clean navigation structure
-   - Mobile responsive
-   
-2. **Minimal Mistakes**
-   - More customizable
-   - Better for blog-style content
-   - Requires more configuration
-
-3. **Minima** (Default)
-   - Simple and clean
-   - Good starting point
-   - Limited documentation features
+### Why Just the Docs?
+- Purpose-built for technical documentation
+- Built-in search functionality
+- Clean, professional navigation structure
+- Mobile responsive design
+- Supports code syntax highlighting
+- Easy configuration via _config.yml
+- Active community and maintenance
+- Extensive customization options for branding
 
 ## Content Structure
 
@@ -165,8 +158,9 @@ rholang-dev/
 
 ## Next Steps
 1. ~~Review and approve this plan~~ ✓
-2. ~~Select technology stack~~ ✓ (Jekyll with Just the Docs)
-3. Create initial /docs directory structure
-4. Install and configure Just the Docs theme
-5. Create _config.yml with basic Jekyll configuration
-6. Begin Phase 1 implementation
+2. ~~Select technology stack~~ ✓ (Jekyll)
+3. ~~Select theme~~ ✓ (Just the Docs)
+4. Create initial /docs directory structure
+5. Configure Just the Docs theme in _config.yml
+6. Set up basic navigation and homepage
+7. Begin Phase 1 implementation
