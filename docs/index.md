@@ -1,12 +1,12 @@
 ---
 layout: home
-title: Rholang - Concurrent Language for Blockchain
+title: Rholang
 nav_exclude: true
-description: "Rholang is a reflective higher-order concurrent programming language designed for blockchain and distributed computing."
+description: "A reflective higher-order concurrent programming language designed for blockchain and distributed computing."
 permalink: /
 ---
 
-# Rholang Documentation
+# Rholang
 {: .fs-9 }
 
 A reflective higher-order concurrent programming language for blockchain and distributed systems.
@@ -61,7 +61,7 @@ Ready to dive in? Start with our [Getting Started Guide]({{ '/learn/getting-star
 3. Write your first Rholang program
 4. Understand the basics of concurrent programming in Rholang
 
-## Documentation Structure
+## Explore Rholang
 
 <div class="grid">
   <div class="grid-item">
@@ -96,4 +96,4 @@ Rholang is open source and welcomes contributions! Whether you're fixing bugs, i
 
 ---
 
-<small>This documentation is continuously updated. Last modified: {{ "now" | date: "%Y-%m-%d" }}</small>
+<small>This site is continuously updated. Last modified: {{ "now" | date: "%Y-%m-%d" }}</small>
